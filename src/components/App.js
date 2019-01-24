@@ -4,9 +4,13 @@ import articles from '../fixture'
 import 'bootstrap/dist/css/bootstrap.css'
 
 class Appp extends Component {
-    state = {
-        reverted: false
+    constructor(props) {
+        super(props);
+        this.state = {
+            reverted: false
+        }
     }
+
 
     render() {
         return (
@@ -22,9 +26,11 @@ class Appp extends Component {
         )
     }
 
-    revert = () => this.setState({
-        reverted: !this.state.reverted
-    })
+    revert() {
+        return () => this.setState({
+            reverted: !this.state.reverted
+        })
+    }
 }
 
 export default Appp
