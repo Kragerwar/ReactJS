@@ -29,6 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "path": "^0.12.7",
     "webpack-cli": "^3.2.1"
   }
 }

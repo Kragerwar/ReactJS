@@ -1,8 +1,10 @@
+var path = require('path');
+
 module.exports = {
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
-        path: '/home/artem/WebstormProjects/test/my-app/public'
+        path: path.resolve(__dirname,'public')
     },
     module: {
         rules: [
@@ -21,7 +23,7 @@ module.exports = {
             }
         ]
     },
-    watch: true,
+    watch: false,
     devtool: 'source-map',
     resolve: { extensions: ['.js', '.jsx'], modules: ['node_modules', '/home/artem/WebstormProjects/test/my-app'] }
 };
